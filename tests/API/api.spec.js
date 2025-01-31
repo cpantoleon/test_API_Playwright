@@ -8,7 +8,7 @@ const TOKEN_FILE = 'gorest_token.txt';
 if (!fs.existsSync(TOKEN_FILE)) {
     console.log('🔍 No API token found. Running UI test to fetch token...');
     try {
-        execSync('npx playwright test tests/ui/get_gorest_token.spec.js', { stdio: 'inherit' });
+        execSync('npx playwright test tests/ui/ui.spec.js', { stdio: 'inherit' });
     } catch (error) {
         console.error('Failed to get API token.');
         process.exit(1);

@@ -4,8 +4,8 @@
     "license": "ISC",
     "scripts": {
       "test": "playwright test", 
-      "login": "playwright test tests/ui/get_gorest_token.spec.js",
-      "api": "playwright test tests/api/gorest_api.spec.js"
+      "ui": "playwright test tests/ui/ui.spec.js",
+      "api": "playwright test tests/api/api.spec.js"
     },
     "devDependencies": {
       "@playwright/test": "^1.50.0",
