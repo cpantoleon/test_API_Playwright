@@ -1,11 +1,11 @@
 {
   "config": {
-    "configFile": "C:\\Users\\cpantole\\OneDrive - Netcompany\\Desktop\\playwrght test api\\playwright_API\\playwright.config.js",
-    "rootDir": "C:/Users/cpantole/OneDrive - Netcompany/Desktop/playwrght test api/playwright_API",
+    "configFile": "C:\\Users\\Christos\\Documents\\git\\test_API_Playwright\\playwright.config.js",
+    "rootDir": "C:/Users/Christos/Documents/git/test_API_Playwright",
     "forbidOnly": false,
     "fullyParallel": false,
     "globalSetup": null,
-    "globalTeardown": "C:\\Users\\cpantole\\OneDrive - Netcompany\\Desktop\\playwrght test api\\playwright_API\\tests\\globals\\global-teardown.js",
+    "globalTeardown": "C:\\Users\\Christos\\Documents\\git\\test_API_Playwright\\tests\\globals\\global-teardown.js",
     "globalTimeout": 0,
     "grep": {},
     "grepInvert": null,
@@ -33,13 +33,13 @@
     "quiet": false,
     "projects": [
       {
-        "outputDir": "C:/Users/cpantole/OneDrive - Netcompany/Desktop/playwrght test api/playwright_API/test-results",
+        "outputDir": "C:/Users/Christos/Documents/git/test_API_Playwright/test-results",
         "repeatEach": 1,
         "retries": 0,
         "metadata": {},
         "id": "",
         "name": "",
-        "testDir": "C:/Users/cpantole/OneDrive - Netcompany/Desktop/playwrght test api/playwright_API",
+        "testDir": "C:/Users/Christos/Documents/git/test_API_Playwright",
         "testIgnore": [],
         "testMatch": [
           "**/*.@(spec|test).?(c|m)[jt]s?(x)"
@@ -60,70 +60,79 @@
       "file": "tests/UI/ui.spec.js",
       "column": 0,
       "line": 0,
-      "specs": [
+      "specs": [],
+      "suites": [
         {
-          "title": "Extract GoRest API Token with name PlaywrightTestToken",
-          "ok": false,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 30000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "",
-              "projectName": "",
-              "results": [
-                {
-                  "workerIndex": 0,
-                  "status": "failed",
-                  "duration": 1492,
-                  "error": {
-                    "message": "Error: page.goto: net::ERR_ABORTED; maybe frame was detached?\nCall log:\n\u001b[2m  - navigating to \"https://gorest.co.in/login\", waiting until \"load\"\u001b[22m\n",
-                    "stack": "Error: page.goto: net::ERR_ABORTED; maybe frame was detached?\nCall log:\n\u001b[2m  - navigating to \"https://gorest.co.in/login\", waiting until \"load\"\u001b[22m\n\n    at C:\\Users\\cpantole\\OneDrive - Netcompany\\Desktop\\playwrght test api\\playwright_API\\tests\\UI\\ui.spec.js:6:16",
-                    "location": {
-                      "file": "C:\\Users\\cpantole\\OneDrive - Netcompany\\Desktop\\playwrght test api\\playwright_API\\tests\\UI\\ui.spec.js",
-                      "column": 16,
-                      "line": 6
-                    },
-                    "snippet": "\u001b[0m \u001b[90m 4 |\u001b[39m test(\u001b[32m'Extract GoRest API Token with name PlaywrightTestToken'\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\n \u001b[90m 5 |\u001b[39m     \u001b[90m// 🔹 Go to GoRest login page\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 6 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m'https://gorest.co.in/login'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m   |\u001b[39m                \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 7 |\u001b[39m\n \u001b[90m 8 |\u001b[39m     \u001b[90m// 🔐 Enter login details (Replace with valid credentials)\u001b[39m\n \u001b[90m 9 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mfill(\u001b[32m'input[name=\"email\"]'\u001b[39m\u001b[33m,\u001b[39m \u001b[32m'your-email@example.com'\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m"
-                  },
-                  "errors": [
-                    {
-                      "location": {
-                        "file": "C:\\Users\\cpantole\\OneDrive - Netcompany\\Desktop\\playwrght test api\\playwright_API\\tests\\UI\\ui.spec.js",
-                        "column": 16,
-                        "line": 6
-                      },
-                      "message": "Error: page.goto: net::ERR_ABORTED; maybe frame was detached?\nCall log:\n\u001b[2m  - navigating to \"https://gorest.co.in/login\", waiting until \"load\"\u001b[22m\n\n\n\u001b[0m \u001b[90m 4 |\u001b[39m test(\u001b[32m'Extract GoRest API Token with name PlaywrightTestToken'\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\n \u001b[90m 5 |\u001b[39m     \u001b[90m// 🔹 Go to GoRest login page\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 6 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m'https://gorest.co.in/login'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m   |\u001b[39m                \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 7 |\u001b[39m\n \u001b[90m 8 |\u001b[39m     \u001b[90m// 🔐 Enter login details (Replace with valid credentials)\u001b[39m\n \u001b[90m 9 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mfill(\u001b[32m'input[name=\"email\"]'\u001b[39m\u001b[33m,\u001b[39m \u001b[32m'your-email@example.com'\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m\n\u001b[2m    at C:\\Users\\cpantole\\OneDrive - Netcompany\\Desktop\\playwrght test api\\playwright_API\\tests\\UI\\ui.spec.js:6:16\u001b[22m"
-                    }
-                  ],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2025-01-31T15:02:00.168Z",
-                  "attachments": [],
-                  "errorLocation": {
-                    "file": "C:\\Users\\cpantole\\OneDrive - Netcompany\\Desktop\\playwrght test api\\playwright_API\\tests\\UI\\ui.spec.js",
-                    "column": 16,
-                    "line": 6
-                  }
-                }
-              ],
-              "status": "unexpected"
-            }
-          ],
-          "id": "7d09c78b60040c5713c0-d42a477faa8034ad80c4",
+          "title": "Test Login page",
           "file": "tests/UI/ui.spec.js",
           "line": 4,
-          "column": 5
+          "column": 6,
+          "specs": [
+            {
+              "title": "Extract GoRest API Token with name PlaywrightTestToken",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "status": "failed",
+                      "duration": 4527,
+                      "error": {
+                        "message": "Error: page.fill: Target page, context or browser has been closed\nCall log:\n\u001b[2m  - waiting for locator('input[name=\"email\"]')\u001b[22m\n",
+                        "stack": "Error: page.fill: Target page, context or browser has been closed\nCall log:\n\u001b[2m  - waiting for locator('input[name=\"email\"]')\u001b[22m\n\n    at UI.enterLoginDetails (C:\\Users\\Christos\\Documents\\git\\test_API_Playwright\\tests\\Actions\\UI.js:16:25)\n    at C:\\Users\\Christos\\Documents\\git\\test_API_Playwright\\tests\\UI\\ui.spec.js:7:18",
+                        "location": {
+                          "file": "C:\\Users\\Christos\\Documents\\git\\test_API_Playwright\\tests\\Actions\\UI.js",
+                          "column": 25,
+                          "line": 16
+                        },
+                        "snippet": "\u001b[90m   at \u001b[39mtests\\Actions\\UI.js:16\n\n\u001b[0m \u001b[90m 14 |\u001b[39m     \u001b[90m// 🔐 Enter login details (Replace with valid credentials)\u001b[39m\n \u001b[90m 15 |\u001b[39m     \u001b[36masync\u001b[39m enterLoginDetails() {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 16 |\u001b[39m         \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mfill(\u001b[32m'input[name=\"email\"]'\u001b[39m\u001b[33m,\u001b[39m \u001b[32m'your-email@example.com'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                         \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 17 |\u001b[39m         \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mfill(\u001b[32m'input[name=\"password\"]'\u001b[39m\u001b[33m,\u001b[39m \u001b[32m'your-secure-password'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 18 |\u001b[39m     }\n \u001b[90m 19 |\u001b[39m\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "C:\\Users\\Christos\\Documents\\git\\test_API_Playwright\\tests\\Actions\\UI.js",
+                            "column": 25,
+                            "line": 16
+                          },
+                          "message": "Error: page.fill: Target page, context or browser has been closed\nCall log:\n\u001b[2m  - waiting for locator('input[name=\"email\"]')\u001b[22m\n\n\n\u001b[90m   at \u001b[39mtests\\Actions\\UI.js:16\n\n\u001b[0m \u001b[90m 14 |\u001b[39m     \u001b[90m// 🔐 Enter login details (Replace with valid credentials)\u001b[39m\n \u001b[90m 15 |\u001b[39m     \u001b[36masync\u001b[39m enterLoginDetails() {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 16 |\u001b[39m         \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mfill(\u001b[32m'input[name=\"email\"]'\u001b[39m\u001b[33m,\u001b[39m \u001b[32m'your-email@example.com'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                         \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 17 |\u001b[39m         \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mfill(\u001b[32m'input[name=\"password\"]'\u001b[39m\u001b[33m,\u001b[39m \u001b[32m'your-secure-password'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 18 |\u001b[39m     }\n \u001b[90m 19 |\u001b[39m\u001b[0m\n\u001b[2m    at UI.enterLoginDetails (C:\\Users\\Christos\\Documents\\git\\test_API_Playwright\\tests\\Actions\\UI.js:16:25)\u001b[22m\n\u001b[2m    at C:\\Users\\Christos\\Documents\\git\\test_API_Playwright\\tests\\UI\\ui.spec.js:7:18\u001b[22m"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-01-31T18:21:10.241Z",
+                      "attachments": [],
+                      "errorLocation": {
+                        "file": "C:\\Users\\Christos\\Documents\\git\\test_API_Playwright\\tests\\Actions\\UI.js",
+                        "column": 25,
+                        "line": 16
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "7d09c78b60040c5713c0-bf77c2a8ba152f479829",
+              "file": "tests/UI/ui.spec.js",
+              "line": 5,
+              "column": 5
+            }
+          ]
         }
       ]
     }
   ],
   "errors": [],
   "stats": {
-    "startTime": "2025-01-31T15:01:59.031Z",
-    "duration": 3947.291,
+    "startTime": "2025-01-31T18:21:09.678Z",
+    "duration": 5390.089999999999,
     "expected": 0,
     "skipped": 0,
     "unexpected": 1,

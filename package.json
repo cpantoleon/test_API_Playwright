@@ -1,16 +1,18 @@
 {
-    "name": "test-playwright",
-    "version": "1.0.0",
-    "license": "ISC",
-    "scripts": {
-      "test": "playwright test", 
+  "name": "test-playwright",
+  "version": "1.0.0",
+  "license": "ISC",
+  "scripts": {
+      "pretest": "rimraf test-results || true",
+      "test": "playwright test",
       "ui": "playwright test tests/ui/ui.spec.js",
       "api": "playwright test tests/api/api.spec.js"
-    },
-    "devDependencies": {
+  },
+  "devDependencies": {
+      "rimraf": "^5.0.10"
+  },
+  "dependencies": {
       "@playwright/test": "^1.50.0",
       "js-yaml": "^4.1.0"
-    },
-    "dependencies": {}
   }
-  
+}
