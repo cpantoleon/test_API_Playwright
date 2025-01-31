@@ -1,5 +1,5 @@
 const { test: base } = require('@playwright/test');
-const { UI } = require('../Actions/UI'); // Ensure the correct import path
+const { UI } = require('../Actions/UI.js'); // Ensure the correct import path
 
 exports.test = base.extend({
     ui: async ({ page }, use) => {

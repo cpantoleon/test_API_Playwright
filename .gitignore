@@ -1,3 +1,5 @@
 node_modules/
 test-results/
 .vscode/
+results.json
+package-lock.json
