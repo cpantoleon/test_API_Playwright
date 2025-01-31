@@ -8,7 +8,8 @@
       "api": "playwright test tests/api/gorest_api.spec.js"
     },
     "devDependencies": {
-      "@playwright/test": "^1.50.0"
+      "@playwright/test": "^1.50.0",
+      "js-yaml": "^4.1.0"
     },
     "dependencies": {}
   }
