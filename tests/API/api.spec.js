@@ -4,7 +4,7 @@ import { execSync } from 'child_process';
 
 const TOKEN_FILE = 'gorest_token.txt';
 
-// 🔹 Check if token exists; if not, run the UI test to get the token
+// Check if token exists; if not, run the UI test to get the token
 if (!fs.existsSync(TOKEN_FILE)) {
     console.log('🔍 No API token found. Running UI test to fetch token...');
     try {
@@ -15,7 +15,7 @@ if (!fs.existsSync(TOKEN_FILE)) {
     }
 }
 
-// 🔹 Read the extracted token
+// Read the extracted token
 const API_TOKEN = fs.readFileSync(TOKEN_FILE, 'utf-8').trim();
 const BASE_URL = 'https://gorest.co.in/public/v2';
 
