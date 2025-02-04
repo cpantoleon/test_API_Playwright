@@ -2,6 +2,7 @@ const { test } = require('../utils/fixture');
 const { readYaml } = require('../utils/readYaml');
 
 const testData = readYaml('../data/myData.yml');
+//const testData = readYaml('../data/testData.yml');
 
 test.describe('Test Login page', () => {
     test('Extract GoRest API Token with name PlaywrightTestToken', async ({ ui, page }) => {
