@@ -1,9 +1,11 @@
 const { expect } = require('@playwright/test');
+const { applicationLocators } = require('../locators/locators');
 const fs = require('fs');
 
 class UI {
     constructor(page) {
         this.page = page;
+        this.locators = applicationLocators;
     }
 
     // 🔹 Go to GoRest login page
@@ -11,17 +13,17 @@ class UI {
         await this.page.goto('https://gorest.co.in/consumer/login');
     }
 
-    // 🔐 Enter login details (Replace with valid credentials)
+    // Enter login details (Replace with valid credentials)
     async enterLoginDetails() {
-        await this.page.fill('input[name="email"]', 'your-email@example.com');
-        await this.page.fill('input[name="password"]', 'your-secure-password');
+        await this.page.fill(this.locators.emailInput, 'your-email@example.com');
+        await this.page.fill(this.locators.passwordInput, 'your-secure-password');
     }
 
     async clickLoginButton() {
-        await this.page.click('button[type="submit"]'); // Click login button
+        await this.page.click(this.locators.loginButton); // Click login button
     }
 
-    // 🔹 Navigate to Access Tokens Page
+    //Navigate to Access Tokens Page
     async navigateToAccessTokensPage() {
         await this.page.waitForURL('https://gorest.co.in/my-account/access-tokens');
     }
@@ -30,14 +32,14 @@ class UI {
         await this.page.goto('https://gorest.co.in/my-account/access-tokens');
     }
 
-    // 🔍 Find the token with name "PlaywrightTestToken"
+    // Find the token with name "PlaywrightTestToken"
     async findTokenByName(tokenName) {
-        const rows = await this.page.$$('table tbody tr');
+        const rows = await this.page.$$(this.locators.tokenTableRows);
         let tokenValue = null;
         for (const row of rows) {
-            const name = await row.locator('td:nth-child(1)').textContent();
+            const name = await row.locator(this.locators.tokenNameCell).textContent();
             if (name.trim() === tokenName) {
-                tokenValue = await row.locator('td:nth-child(2)').textContent();
+                tokenValue = await row.locator(this.locators.tokenValueCell).textContent();
                 break;
             }
         }
@@ -47,10 +49,10 @@ class UI {
         return tokenValue.trim();
     }
 
-    // 🔑 Extract, log, save, and validate the token
+    // Extract, log, save, and validate the token
     async extractAndSaveToken(tokenName, filePath = 'gorest_token.txt') {
         const tokenValue = await this.findTokenByName(tokenName);
-        console.log(`🔑 Extracted Token: ${tokenValue}`);
+        console.log(`Extracted Token: ${tokenValue}`);
 
         // Save token to a file
         fs.writeFileSync(filePath, tokenValue);
