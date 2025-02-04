@@ -3,3 +3,4 @@ test-results/
 .vscode/
 results.json
 package-lock.json
+tests/testData/myData.yml

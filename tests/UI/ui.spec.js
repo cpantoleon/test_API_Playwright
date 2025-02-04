@@ -1,9 +1,12 @@
-const { test } = require('../utils/fixture'); // Import the custom fixture
+const { test } = require('../utils/fixture');
+const { readYaml } = require('../utils/readYaml');
+
+const testData = readYaml('../data/myData.yml');
 
 test.describe('Test Login page', () => {
     test('Extract GoRest API Token with name PlaywrightTestToken', async ({ ui, page }) => {
 
-        await ui.enterLoginDetails(page);
+        await ui.enterLoginDetails(page, testData.username, testData.password);
         await ui.clickLoginButton(page);
         await ui.navigateToAccessTokensPage(page);
         await ui.clickCreateTokenButton(page);

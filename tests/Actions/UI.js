@@ -14,9 +14,9 @@ class UI {
     }
 
     // Enter login details (Replace with valid credentials)
-    async enterLoginDetails() {
-        await this.page.fill(this.locators.emailInput, 'your-email@example.com');
-        await this.page.fill(this.locators.passwordInput, 'your-secure-password');
+    async enterLoginDetails(username, password) {
+        await this.page.fill(this.locators.emailInput, username);
+        await this.page.fill(this.locators.passwordInput, password);
     }
 
     async clickLoginButton() {
