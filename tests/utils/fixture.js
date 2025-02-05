@@ -1,4 +1,4 @@
-const { test: base } = require('@playwright/test');
+const { test: base, expect } = require('@playwright/test');
 const { UI } = require('../Actions/UI.js'); // Ensure the correct import path
 
 exports.test = base.extend({
@@ -8,3 +8,5 @@ exports.test = base.extend({
         await use(ui); // Expose the UI instance to the test
     },
 });
+
+exports.expect = expect;

@@ -9,7 +9,7 @@ let API_TOKEN = '';
 function fetchApiToken() {
     // Check if token exists; if not, run the UI test to get the token
     if (!fs.existsSync(TOKEN_FILE)) {
-        console.log('🔍 No API token found. Running UI test to fetch token...');
+        console.log('No API token found. Running UI test to fetch token...');
         try {
             execSync('npx playwright test tests/ui/ui.spec.js', { stdio: 'inherit' });
         } catch (error) {

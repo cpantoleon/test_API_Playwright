@@ -8,9 +8,13 @@ class UI {
         this.locators = applicationLocators;
     }
 
-    // 🔹 Go to GoRest login page
+    // Go to GoRest login page
     async goToGoRestLoginPage() {
         await this.page.goto('https://gorest.co.in/consumer/login');
+    }
+
+    async clickOnGitHubButton() {
+        await this.page.click(this.locators.githubButton);
     }
 
     // Enter login details (Replace with valid credentials)
@@ -37,9 +41,11 @@ class UI {
         const rows = await this.page.$$(this.locators.tokenTableRows);
         let tokenValue = null;
         for (const row of rows) {
-            const name = await row.locator(this.locators.tokenNameCell).textContent();
+            const nameElement = await row.$(this.locators.tokenNameCell);
+            const name = await nameElement.textContent();
             if (name.trim() === tokenName) {
-                tokenValue = await row.locator(this.locators.tokenValueCell).textContent();
+                const tokenElement = await row.$(this.locators.tokenValueCell);
+                tokenValue = await tokenElement.textContent();
                 break;
             }
         }
@@ -48,18 +54,11 @@ class UI {
         }
         return tokenValue.trim();
     }
-
+    
     // Extract, log, save, and validate the token
     async extractAndSaveToken(tokenName, filePath = 'gorest_token.txt') {
         const tokenValue = await this.findTokenByName(tokenName);
-        console.log(`Extracted Token: ${tokenValue}`);
-
-        // Save token to a file
         fs.writeFileSync(filePath, tokenValue);
-
-        // ✅ Ensure token is retrieved
-        expect(tokenValue).toBeTruthy();
-
         return tokenValue;
     }
 }

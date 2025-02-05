@@ -1,4 +1,3 @@
 Users:
-    Valid:
-        userName: "github email"
-        password: "github password"
+    userName: "github email"
+    password: "github password"
